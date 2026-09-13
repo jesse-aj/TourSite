@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — 1OneSkyKing Adventure Guide</title>
+<meta name="description" content="Photos and videos from past 1OneSkyKing adventures — hiking, ziplines, camping, and customer experiences.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 30L14 12L20 22L26 10L36 30H4Z" fill="#D97A2B"/>
+        <path d="M4 30L14 12L20 22L26 10L36 30" stroke="#F4EFE4" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+      </svg>
+      1OneSkyKing
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">☰</button>
+    <nav class="primary-nav" id="primary-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="contact.html">Book Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section style="padding-bottom:1rem;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Gallery</p>
+        <h1>Adventures, in pictures</h1>
+        <p>A look at past trips, builds, and the people who joined us. Filter by category to see more of what interests you.</p>
+      </div>
+      <div class="gallery-filters" id="gallery-filters">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="activities">Adventure activities</button>
+        <button data-filter="projects">Walkway &amp; zipline projects</button>
+        <button data-filter="hiking-camping">Hiking &amp; camping</button>
+        <button data-filter="customers">Customer experiences</button>
+        <button data-filter="completed">Completed projects</button>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="gallery-grid" id="gallery-grid">
+        <div class="gallery-item" data-cat="activities"><span class="cap">Quad biking trail run</span></div>
+        <div class="gallery-item" data-cat="activities"><span class="cap">Zipline crossing</span></div>
+        <div class="gallery-item" data-cat="hiking-camping"><span class="cap">Sunrise hike</span></div>
+        <div class="gallery-item" data-cat="projects"><span class="cap">Suspension walkway build</span></div>
+        <div class="gallery-item" data-cat="customers"><span class="cap">First-time abseil</span></div>
+        <div class="gallery-item" data-cat="hiking-camping"><span class="cap">Overnight camp setup</span></div>
+        <div class="gallery-item" data-cat="completed"><span class="cap">Finished zipline platform</span></div>
+        <div class="gallery-item" data-cat="activities"><span class="cap">Kayak capsize training</span></div>
+        <div class="gallery-item" data-cat="customers"><span class="cap">Group paintball day</span></div>
+        <div class="gallery-item" data-cat="projects"><span class="cap">Rope bridge in progress</span></div>
+        <div class="gallery-item" data-cat="completed"><span class="cap">Completed trail markers</span></div>
+        <div class="gallery-item" data-cat="hiking-camping"><span class="cap">Weekend hiking group</span></div>
+      </div>
+      <p class="form-note mt-lg">Replace these placeholders with real photos in <code>/images</code> — see the note in <code>README.md</code>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <p>© <span id="year"></span> 1OneSkyKing Adventure Guide</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/000000000000" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">💬</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Now — 1OneSkyKing Adventure Guide</title>
+<meta name="description" content="Book an adventure with 1OneSkyKing Adventure Guide, or get in touch by WhatsApp, phone, or email.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 30L14 12L20 22L26 10L36 30H4Z" fill="#D97A2B"/>
+        <path d="M4 30L14 12L20 22L26 10L36 30" stroke="#F4EFE4" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+      </svg>
+      1OneSkyKing
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">☰</button>
+    <nav class="primary-nav" id="primary-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" aria-current="page">Book Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section style="padding-bottom:1rem;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Book &amp; contact</p>
+        <h1>Let's plan your adventure</h1>
+        <p>Fill in the form and we'll get back to you to confirm availability — or reach out directly by WhatsApp, phone, or email.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap contact-grid">
+
+      <form class="booking" id="booking-form">
+        <div class="row-2">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="row-2">
+          <div class="field">
+            <label for="service">Service</label>
+            <select id="service" name="service" required>
+              <option value="">Choose a service</option>
+              <option>Swimming</option>
+              <option>Kayaking &amp; Capsize Training</option>
+              <option>Walkway Building</option>
+              <option>Ziplining</option>
+              <option>Abseiling</option>
+              <option>Quad Biking</option>
+              <option>Hiking</option>
+              <option>Camping</option>
+              <option>Acting</option>
+              <option>Paintballing</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="date">Preferred date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Group size, experience level, anything else we should know"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send booking request</button>
+        <p class="form-status" id="form-status" role="status"></p>
+        <p class="form-note">We'll confirm availability by phone or WhatsApp within 24 hours.</p>
+      </form>
+
+      <div class="contact-info">
+        <div class="info-card">
+          <h3>WhatsApp</h3>
+          <p>Fastest way to reach us — message anytime.</p>
+          <a class="value" href="https://wa.me/000000000000" target="_blank" rel="noopener">+000 000 000 000</a>
+        </div>
+        <div class="info-card">
+          <h3>Phone &amp; email</h3>
+          <p><a class="value" href="tel:+000000000000">+000 000 000 000</a></p>
+          <p><a class="value" href="mailto:hello@1oneskyking.com">hello@1oneskyking.com</a></p>
+        </div>
+        <div class="info-card">
+          <h3>Location</h3>
+          <p>Adventure Centre address goes here — replace with the real location.</p>
+          <div class="social-row" aria-label="Social media">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="TikTok">TT</a>
+          </div>
+        </div>
+        <div class="map-embed">
+          <iframe title="Adventure centre location" src="https://www.google.com/maps?q=&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <p>© <span id="year"></span> 1OneSkyKing Adventure Guide</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/000000000000" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">💬</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -75,8 +75,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--char);
-  border-bottom: 1px solid rgba(244,239,228,0.08);
+  background: rgba(16,14,12,0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: none;
+  border-radius: 0 0 24px 24px;
 }
 
 .site-header .wrap{
@@ -547,13 +550,13 @@ footer.site-footer{
   padding: 2.5rem 0;
   font-size:0.9rem;
 }
-footer.site-footer .wrap{
-  display:flex;
-  flex-wrap:wrap;
-  gap:1rem;
-  align-items:center;
-  justify-content:space-between;
+footer.site-footer{
+  background: var(--canopy);   /* was: var(--char) */
+  color: var(--bone-dim);
+  padding: 2.5rem 0;
+  font-size:0.9rem;
 }
+
 footer.site-footer nav ul{
   list-style:none; display:flex; gap:1.25rem; margin:0; padding:0; flex-wrap:wrap;
 }

@@ -59,31 +59,35 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Booking form
-  var form = document.getElementById('booking-form');
-  var status = document.getElementById('form-status');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+var form = document.getElementById('booking-form');
+if (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
 
-      // TODO: replace this block with a real submission, e.g.:
-      //   fetch('https://formspree.io/f/YOUR_FORM_ID', {
-      //     method: 'POST',
-      //     headers: { 'Accept': 'application/json' },
-      //     body: new FormData(form)
-      //   })
-      // Until then, this just confirms the form was filled correctly
-      // and shows a message — no data is sent anywhere yet.
+    var name = document.getElementById('name').value;
+    var phone = document.getElementById('phone').value;
+    var service = document.getElementById('service').value;
+    var date = document.getElementById('date').value;
+    var message = document.getElementById('message').value;
 
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
+    var text =
+      "New booking request:\n" +
+      "Name: " + name + "\n" +
+      "Phone: " + phone + "\n" +
+      "Service: " + service + "\n" +
+      "Preferred date: " + date + "\n" +
+      "Message: " + (message || "-");
 
-      status.textContent = 'Thanks — your request looks good. (Connect this form to Formspree, Getform, or your own backend to actually send it — see README.md.)';
-      status.className = 'form-status ok';
-      form.reset();
-    });
-  }
+    var whatsappNumber = "233246155531"; // <-- put his real number here, country code, no + or spaces
+    var url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text);
+
+    window.open(url, "_blank");
+  });
+}   
 // Hero slideshow
 var slides = document.querySelectorAll('.hero-slide');
 if (slides.length > 1) {

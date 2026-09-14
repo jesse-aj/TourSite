@@ -2,14 +2,14 @@
    1OneSkyKing Adventure Guide — global stylesheet
    Design tokens
    ========================================================= */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap');
 
 :root{
   /* color */
   --canopy:      #132119;   /* deep forest green — primary dark */
   --canopy-2:    #1c3226;   /* lighter green for panels */
   --char:        #100e0c;   /* near-black, warm not blue */
-  --ember:       #d97a2b;   /* burnt orange accent */
+  --ember:       #2fa6a0;    /*Teal */  /*--ember: #e8543a; */
   --gold:        #c99a3d;   /* muted gold accent */
   --bone:        #f4efe4;   /* warm off-white */
   --bone-dim:    #cfc6b3;   /* muted bone for secondary text on dark */
@@ -36,6 +36,7 @@ body{
   background: var(--bone);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  --header-font: 'Anton', sans-serif;
 }
 
 img{ max-width:100%; display:block; }
@@ -86,6 +87,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .logo{
+  font-family: var(--header-font);
+  letter-spacing: 0.5px;
   display:flex;
   align-items:center;
   gap:0.6rem;
@@ -192,15 +195,33 @@ nav.primary-nav a[aria-current="page"]{
    ========================================================= */
 .hero{
   position:relative;
+  overflow:hidden;
   min-height: 82vh;
   display:flex;
   align-items:flex-end;
-  background:
-    linear-gradient(180deg, rgba(16,14,12,0.35) 0%, rgba(16,14,12,0.55) 55%, rgba(16,14,12,0.92) 100%),
-    var(--canopy) url('../images/hero-adventure.jpg') center/cover no-repeat;
   color: var(--bone);
 }
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(16,14,12,0.35) 0%, rgba(16,14,12,0.55) 55%, rgba(16,14,12,0.92) 100%);
+  z-index:1;
+}
+.hero-slide{
+  position:absolute;
+  inset:0;
+  background-position:center;
+  background-size:cover;
+  opacity:0;
+  transition: opacity 1.4s ease;
+  z-index:0;
+}
+.hero-slide.active{ opacity:1; }
+
 .hero-inner{
+  position:relative;
+  z-index:2;
   padding-bottom: clamp(2.5rem, 6vw, 5rem);
   max-width: 720px;
 }

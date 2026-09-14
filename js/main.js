@@ -84,4 +84,14 @@ document.addEventListener('DOMContentLoaded', function () {
       form.reset();
     });
   }
+// Hero slideshow
+var slides = document.querySelectorAll('.hero-slide');
+if (slides.length > 1) {
+  var current = 0;
+  setInterval(function () {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 5000); // change every 5 seconds
+}
 });

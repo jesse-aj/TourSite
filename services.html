@@ -18,8 +18,8 @@
     <nav class="primary-nav" id="primary-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" aria-current="page">About</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html" >About</a></li>
+        <li><a href="services.html" aria-current="page">Services</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Book Now</a></li>
       </ul>
@@ -35,18 +35,9 @@
         <h1>Ten ways to try something new</h1>
         <p>Every service below includes a full safety briefing and can be booked on its own or combined into a longer trip. Jump to any section, or scroll through all of them.</p>
       </div>
-      <div class="gallery-filters" aria-label="Jump to a service">
-        <button onclick="location.hash='swimming'">Swimming</button>
-        <button onclick="location.hash='kayaking'">Kayaking</button>
-        <button onclick="location.hash='walkway-building'">Walkway Building</button>
-        <button onclick="location.hash='ziplining'">Ziplining</button>
-        <button onclick="location.hash='abseiling'">Abseiling</button>
-        <button onclick="location.hash='quad-biking'">Quad Biking</button>
-        <button onclick="location.hash='hiking'">Hiking</button>
-        <button onclick="location.hash='camping'">Camping</button>
-        <button onclick="location.hash='acting'">Acting</button>
-        <button onclick="location.hash='paintballing'">Paintballing</button>
-      </div>
+      <p class="service-taglist" aria-hidden="true">
+  Swimming · Kayaking · Walkway Building · Ziplining · Abseiling · Quad Biking · Hiking · Camping · Acting · Paintballing
+</p>
     </div>
   </section>
 
@@ -54,7 +45,7 @@
     <div class="wrap">
 
       <div class="service-detail" id="swimming">
-        <div class="thumb"></div>
+        <div class="thumb" style="background-image:url('images/Swimming.jpeg')"></div>
         <div>
           <h3>Swimming</h3>
           <p>Guided swimming sessions at approved locations, with clear requirements and safety instructions for every skill level — from first-timers to confident swimmers.</p>
@@ -64,7 +55,7 @@
       </div>
 
       <div class="service-detail" id="kayaking">
-        <div class="thumb"></div>
+        <div class="thumb" style="background-image:url('images/boatriding.jpeg')"></div>
         <div>
           <h3>Kayaking &amp; Capsize Training</h3>
           <p>On-water kayaking experiences paired with proper capsize-recovery training, so every participant knows exactly what to do if a boat flips.</p>
@@ -74,17 +65,17 @@
       </div>
 
       <div class="service-detail" id="walkway-building">
-        <div class="thumb"></div>
+        <div class="thumb" style="background-image:url('images/CanopyWalk.jpeg')"></div>
         <div>
-          <h3>Walkway Building</h3>
-          <p>Design and construction of adventure walkways, including suspension bridges, built to a proper safety and engineering standard for outdoor sites.</p>
-          <div class="meta"><span class="tag">Project-based</span><span class="tag">Custom quote</span></div>
-          <p class="mt-lg"><a href="contact.html?service=Walkway+Building" class="btn btn-primary">Request a quote</a></p>
+          <h3>Suspension Bridge</h3>
+          <p>Adventure walkways, including suspension bridges, built to a proper safety and engineering standard for outdoor sites.</p>
+          <div class="meta"><span class="tag">Safe</span><span class="tag">Standard</span></div>
+          <p class="mt-lg"><a href="contact.html?service=Walkway+Building" class="btn btn-primary">Book this activity</a></p>
         </div>
       </div>
 
       <div class="service-detail" id="ziplining">
-        <div class="thumb"></div>
+        <div class="thumb" style="background-image:url('images/Zipline.jpeg')"></div>
         <div>
           <h3>Ziplining</h3>
           <p>Zipline construction and installation services, alongside guided rides — with a focus on safety, thoughtful design, and technical rigging expertise.</p>
@@ -94,7 +85,7 @@
       </div>
 
       <div class="service-detail" id="abseiling">
-        <div class="thumb"></div>
+        <div class="thumb" style="background-image:url('images/GoingDown.jpeg')"></div>
         <div>
           <h3>Abseiling</h3>
           <p>Guided rope-descending experiences on suitable rock faces or structures, with full harness checks and a briefing before every descent.</p>
@@ -104,7 +95,7 @@
       </div>
 
       <div class="service-detail" id="quad-biking">
-        <div class="thumb"></div>
+        <div class="thumb" style="background-image:url('images/QuadBike.jpeg')"></div>
         <div>
           <h3>Quad Biking</h3>
           <p>Off-road quad routes for beginners and experienced riders, fully briefed on handling and terrain before setting out.</p>

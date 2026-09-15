@@ -72,11 +72,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    Header / Nav
    ========================================================= */
 .site-header{
-  position: fixed;
+  position: sticky;
   top: 18px;
-  left: 18px;
-  right: 18px;
-  z-index: 1000;
+  z-index: 100;
+  margin: 0 18px;
   background: rgba(16,14,12,0.45);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -90,11 +89,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   justify-content:space-between;
   height: 64px;
   max-width: 1180px;
-}
-
-/* pages without a hero need room so content doesn't hide under the floating bar */
-main > section:first-child:not(.hero){
-  padding-top: 130px;
 }
 
 .logo{

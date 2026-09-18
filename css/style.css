@@ -6,18 +6,19 @@
 
 :root{
   /* color */
-  --canopy:      #132119;   /* deep forest green — primary dark */
-  --canopy-2:    #1c3226;   /* lighter green for panels */
-  --char:        #100e0c;   /* near-black, warm not blue */
-  --ember:       #2fa6a0;    /*Teal */  /*--ember: #e8543a; */
-  --gold:        #c99a3d;   /* muted gold accent */
-  --bone:        #f4efe4;   /* warm off-white */
-  --bone-dim:    #cfc6b3;   /* muted bone for secondary text on dark */
-  --ink:         #1a1712;   /* body text on light */
+  --canopy:      #123a63;   /* deep blue — primary dark (sections, footer, thumbs) */
+  --canopy-2:    #1e5a91;   /* lighter blue for panels/thumbs */
+  --char:        #0a1420;   /* near-black navy — header base */
+  --ember:       #2f6fed;   /* bold blue — main CTA/accent color */
+  --gold:        #5c6b3f;   /* army green — small accent touches only */
+  --bone:        #ffffff;   /* white — primary light color now */
+  --bone-dim:    #d7dee6;   /* soft blue-white for secondary text on dark */
+  --ink:         #12202e;   /* dark navy text on light backgrounds */
 
   /* type */
   --display: 'Fraunces', serif;
   --body: 'Work Sans', sans-serif;
+  --header-font: 'Anton', sans-serif;
 
   /* layout */
   --maxw: 1180px;
@@ -133,7 +134,7 @@ nav.primary-nav a[aria-current="page"]{
   background:none;
   border:1px solid rgba(244,239,228,0.3);
   color: var(--bone);
-  border-radius: 999px;
+  border-radius: 6px;
   width:42px; height:38px;
   font-size:1.1rem;
   cursor:pointer;
@@ -180,16 +181,9 @@ nav.primary-nav a[aria-current="page"]{
 
 .btn-primary{
   background: var(--ember);
-  color: var(--char);
+  color: #ffffff;  
 }
-.btn-primary:hover{ background:#e88a3d; }
-
-.btn-outline{
-  background: transparent;
-  border-color: rgba(244,239,228,0.5);
-  color: var(--bone);
-}
-.btn-outline:hover{ border-color: var(--bone); }
+.btn-primary:hover{ background:#4a80f0; }
 
 .btn-dark{
   background: var(--char);
